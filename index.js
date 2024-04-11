@@ -7,6 +7,15 @@ app.get('/', (req, res) => {
     res.send(`<h1>Welcome to my Express App</h1>`);
 });
 
+app.get('/json', (req, res) => {
+    res.json(
+        {
+            name: "Albacore",
+            age: 42
+        }
+    )
+});
+
 app.listen(PORT, () => {
    console.log(`app running on port ${PORT}`)
 });
